@@ -1,8 +1,10 @@
 const Block = require('./block.js');
 const Transaction = require('./transaction.js');
-const Blockchain = require('./chain/blockchain.js');
-const WebSocket = require('ws');
+const Blockchain = require('./blockchain.js');
+const WebSocket = require('websocket');
+
 const leeusNode = function(port) {
+
 	let leeusSockets = [];
 	let leeusServer;
 	let _port = port;
@@ -18,7 +20,7 @@ const leeusNode = function(port) {
 	function init() {
 
 		leeus.createGenesisBlock();
-
+		//Recieveing Error Need to Fix && Breaks Code
 		leeusServer = new WebSocket.Server({
 			port: _port
 		});
@@ -36,7 +38,7 @@ const leeusNode = function(port) {
 				case REQUEST_CHAIN:
 					connection.send(JSON.stringify({
 						event: CHAIN,
-						message: chain.getChain()
+						message: leeus.getChain()
 					}))
 					break;
 				case REQUEST_BLOCK:
@@ -97,7 +99,7 @@ const leeusNode = function(port) {
 	}
 
 	const broadcastMessage = (event, message) => {
-		brewSockets.forEach(node => node.send(JSON.stringify({
+		lleusSockets.forEach(node => node.send(JSON.stringify({
 			event,
 			message
 		})))
@@ -115,7 +117,7 @@ const leeusNode = function(port) {
 
 		requestLatestBlock(connection);
 
-		brewSockets.push(connection);
+		leeusSockets.push(connection);
 
 		connection.on('error', () => closeConnection(connection));
 		connection.on('close', () => closeConnection(connection));
@@ -156,4 +158,4 @@ const leeusNode = function(port) {
 	}
 
 }
-module.exports = BrewNode;
+module.exports = leeusNode;

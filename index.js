@@ -1,10 +1,10 @@
 const Blockchain = require('./chain/blockchain.js');
 const Transaction = require('./chain/transaction.js');
-const Node = require('./chain/node.js');
+const leeusNode = require('./chain/node.js');
 
 const port = 18070+Math.floor(Math.random()*30);
 console.log('starting node on ', port)
-let node1 = new Node(port);
+let node1 = new leeusNode(port);
 
 node1.init();
 
