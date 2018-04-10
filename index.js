@@ -1,9 +1,28 @@
+// Module Imports
+var app = require('express')();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
+// File Imports
 const Blockchain = require('./chain/blockchain.js');
 const Transaction = require('./chain/transaction.js');
 const leeusNode = require('./chain/node.js');
 
+const port = 3000 + Math.floor(Math.random() * 10);
 
-Leeus = new Blockchain();
+app.get('/', function(req, res) {
+	res.sendFile(__dirname + '/index.html');
+});
+
+io.on('connection', function(socket) {
+	console.log('a user connected');
+});
+
+http.listen(port, function() {
+	console.log('Making noise on: ' + port);
+});
+
+// Leeus = new Blockchain();
 
 // const port = 18070+Math.floor(Math.random()*30);
 // console.log('starting node on ', port)
