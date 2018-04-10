@@ -1,26 +1,22 @@
-# LeeusNet Block Chain
+# leeus-net
 
-A Javascript Implementation. (Status: ~Alpha)
+> A full-featured Webpack with Vue Material for electron
 
-###### To/Do
-- Further increase Documentation
-- Add/Fix Ability to Host/Create Nodes via Web Server
-- Add More Features
-- Further Encrypt/Secure Chain
+#### Build Setup
 
-### How To Run
+``` bash
+# install dependencies
+npm install
 
--  To Install Dependencies:
-```
-npm i
-```
+# serve with hot reload at localhost:9080
+npm run dev
 
-- EX. of Transaction:
-```
-Leeus.createTransaction(new Transaction(Date.now(), "wallet-a", "wallet-b", 10));
+# build electron application for production
+npm run build
+
+
 ```
 
-- EX. of Mining:
-```
-Leeus.mineCurrentBlock('wallet-k');
-```
+---
+
+This project was generated with [electron-vue](https://github.com/SimulatedGREG/electron-vue) using [vue-cli](https://github.com/vuejs/vue-cli). Documentation about the original structure can be found [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
