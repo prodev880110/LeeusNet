@@ -4,18 +4,24 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
 // File Imports
-const Blockchain = require('./chain/blockchain.js');
-const Transaction = require('./chain/transaction.js');
-const leeusNode = require('./chain/node.js');
+const Blockchain = require('./core/blockchain.js');
+const Transaction = require('./core/transaction.js');
+const leeusNode = require('./core/node.js');
 
-const port = 3000 + Math.floor(Math.random() * 10);
+const port = 4000 + Math.floor(Math.random() * 10);
 
 app.get('/', function(req, res) {
 	res.sendFile(__dirname + '/index.html');
 });
 
 io.on('connection', function(socket) {
+	// A User Connects to socket
 	console.log('a user connected');
+	// A User disonnects to socket
+	socket.on('disconnect', function() {
+		console.log('user disconnected');
+	});
+	// Message
 });
 
 http.listen(port, function() {
