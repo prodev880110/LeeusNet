@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  background-image: url('../../../../../static/mug.gif');
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  padding: 60px 80px;
+  width: 100%;
+  height: inherit;
+}

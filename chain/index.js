@@ -6,7 +6,7 @@ var io = require('socket.io')(http);
 // File Imports
 const Blockchain = require('./chain/blockchain.js');
 const Transaction = require('./chain/transaction.js');
-const leeusNode = require('./chain/node.js');
+// const leeusNode = require('./chain/node.js');
 
 const port = 3000 + Math.floor(Math.random() * 10);
 
