@@ -1,6 +1,6 @@
 # LeeusNet Block Chain
 
-> The Developers Blockchain (Status: ~Alpha)
+A Javascript Implementation. (Status: ~Alpha)
 
 ###### To/Do
 - Further increase Documentation
@@ -8,24 +8,11 @@
 - Add More Features
 - Further Encrypt/Secure Chain
 
-Vue Material Doc: https://vuematerial.io/getting-started
+### How To Run
 
-VueJS: https://vuejs.org/v2/guide/
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+-  To Install Dependencies:
+```
+npm i
 ```
 
 - EX. of Transaction:
