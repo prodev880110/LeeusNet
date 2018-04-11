@@ -1,17 +1,14 @@
 <template>
 <div id="app">
-  <md-app md-waterfall md-mode="fixed">
-    <md-app-toolbar class="md-accents">
+  <md-app md-waterfall  md-mode="fixed">
+    <!-- The Top ToolBar -->
+    <md-app-toolbar class="md-accent md-medium md-dense" md-elevation="3">
       <h3 class="md-title" style="flex: 1">{{title}}</h3>
       <md-button>Refresh</md-button>
       <md-button>Create</md-button>
     </md-app-toolbar>
-
-    <md-app-drawer md-permanent="clipped">
-      <md-toolbar class="md-transparent" md-elevation="0">
-        Navigation
-      </md-toolbar>
-
+    <!-- SIDEBAR -->
+    <md-app-drawer md-permanent="clipped" md-fixed>
       <md-list>
         <md-list-item>
           <md-icon>move_to_inbox</md-icon>
@@ -57,6 +54,7 @@ html,
 body,
 #app{
   height: 100%;
+  background-color: #fff;
 }
 .md-app{
   height: inherit;

@@ -1,10 +1,10 @@
 <template>
 <div id="wrapper">
-  <div>
+  <!-- <div>
     <p v-if="isConnected">We're connected to the server!</p>
     <p>Message from server: "{{socketMessage}}"</p>
     <button @click="pingServer()">Ping Server</button>
-  </div>
+  </div> -->
 </div>
 </template>
 

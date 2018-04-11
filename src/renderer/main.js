@@ -22,7 +22,7 @@ Vue.http = Vue.prototype.$http = axios
 Vue.config.productionTip = false
 
 Vue.use(VueMaterial, store)
-Vue.use(VueSocketIO, 'http://localhost:4207');
+// Vue.use(VueSocketIO, 'http://localhost:4207');
 /* eslint-disable no-new */
 new Vue({
 	components: {

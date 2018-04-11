@@ -7,7 +7,9 @@
 #wrapper {
   background-image: url('../../../../../static/mug.gif');
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #fff;
   height: 100%;
   padding: 60px 80px;
   width: 100%;
