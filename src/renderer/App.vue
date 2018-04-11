@@ -4,6 +4,10 @@
     <!-- The Top ToolBar -->
     <md-app-toolbar class="md-accent md-medium md-dense" md-elevation="3">
       <h3 class="md-title" style="flex: 1">{{title}}</h3>
+      <md-field id="search" md-inline='true'>
+      <label>Search</label>
+      <md-input v-model="initial"></md-input>
+    </md-field>
       <md-button>Refresh</md-button>
       <md-button>Create</md-button>
     </md-app-toolbar>
@@ -55,6 +59,10 @@ body,
 #app{
   height: 100%;
   background-color: #fff;
+}
+#search{
+width:75%;
+margin-right:2%;
 }
 .md-app{
   height: inherit;
