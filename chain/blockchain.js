@@ -1,8 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const Block = require('./block.js');
-const Transaction = require('./transaction.js');
+const Block = require('./block');
+const Transaction = require('./transaction');
 //creates chain
 class Blockchain {
 	constructor() {
@@ -12,20 +12,20 @@ class Blockchain {
 		this.difficulty = 3;
 		//hold unmined transactions
 		this.unminedTransactions = [];
-		this.miningReward = 27;
-    this.registeredAddresses = ['wallet-a', 'wallet-b', 'wallet-c', 'wallet-k'];
+		this.miningReward = 1;
+		this.registeredAddresses = ['wallet-a', 'wallet-b', 'wallet-c', 'wallet-k'];
 		this.createGenesisBlock();
-    //calls airdropCoins
-    this.airdropCoins(100);
+		//calls airdropCoins
+		this.airdropCoins(100);
 	}
 
-  airdropCoins(coins){
-    for(const addr of this. registeredAddresses){
-      let transaction = new Transaction(Date.now(), "mint", addr, coins );
-      this.unminedTransactions.push(transaction);
-    }
-    this.mineCurrentBlock('wallet-k');
-  }
+	airdropCoins(coins) {
+		for (const addr of this.registeredAddresses) {
+			let transaction = new Transaction(Date.now(), "mint", addr, coins);
+			this.unminedTransactions.push(transaction);
+		}
+		this.mineCurrentBlock('wallet-k');
+	}
 
 	createGenesisBlock() {
 		let transaction = new Transaction(Date.now(), "mint", "genesis", 0);
@@ -37,24 +37,24 @@ class Blockchain {
 	getLatestBlock() {
 		return this.chain[this.chain.length - 1];
 	}
-getTotalBlocks(){
-      return chain.length;
-  }
+	getTotalBlocks() {
+		return chain.length;
+	}
 
-getChain(){
-      return chain;
-  }
+	getChain() {
+		return chain;
+	}
 	//mine current blocks
-	mineCurrentBlock( minerAddr ) {
-    let validTransactions = [];
-    for(const transaction of this.unminedTransactions){
-      if( transaction.payerAddr === "mint" || this.validateTransaction(transaction)){
-        // allows mint to make transaction
-        validTransactions.push(transaction);
-      }
-    }
+	mineCurrentBlock(minerAddr) {
+		let validTransactions = [];
+		for (const transaction of this.unminedTransactions) {
+			if (transaction.payerAddr === "mint" || this.validateTransaction(transaction)) {
+				// allows mint to make transaction
+				validTransactions.push(transaction);
+			}
+		}
 
-    console.log("Transactions Validated " + validTransactions.length);
+		console.log("Transactions Validated " + validTransactions.length);
 
 		let block = new Block(Date.now(), validTransactions, this.getLatestBlock().hash);
 
@@ -68,16 +68,16 @@ getChain(){
       new Transaction(Date.now(), "mint", minerAddr, this.miningReward)
     ];
 	}
-  // validate
-  validateTransaction(transaction){
-    let payerAddr = transaction.payerAddr
-    let balance = this.getAddressBalance(payerAddr);
-    if (balance >= transaction.amount){
-      return true;
-    } else {
-      return false;
-    }
-  }
+	// validate
+	validateTransaction(transaction) {
+		let payerAddr = transaction.payerAddr
+		let balance = this.getAddressBalance(payerAddr);
+		if (balance >= transaction.amount) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	//
 	createTransaction(transaction) {
 		this.unminedTransactions.push(transaction);
