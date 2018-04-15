@@ -13,7 +13,7 @@ class Blockchain {
 		//hold unmined transactions
 		this.unminedTransactions = [];
 		this.miningReward = 1;
-		this.registeredAddresses = ['wallet-a', 'wallet-b', 'wallet-c', 'wallet-k'];
+		this.registeredAddresses = [];//'wallet-a', 'wallet-b', 'wallet-c', 'wallet-k'
 		this.createGenesisBlock();
 		//calls airdropCoins
 		this.airdropCoins(100);
@@ -37,13 +37,13 @@ class Blockchain {
 	getLatestBlock() {
 		return this.chain[this.chain.length - 1];
 	}
-	getTotalBlocks() {
-		return chain.length;
-	}
-
-	getChain() {
-		return chain;
-	}
+	// getTotalBlocks() {
+	// 	return chain.length;
+	// }
+	//
+	// getChain() {
+	// 	return chain;
+	// }
 	//mine current blocks
 	mineCurrentBlock(minerAddr) {
 		let validTransactions = [];

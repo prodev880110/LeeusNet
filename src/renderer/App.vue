@@ -4,19 +4,19 @@
     <!-- The Top ToolBar -->
     <md-app-toolbar class="md-accent md-medium md-dense" md-elevation="3">
       <h3 class="md-title" style="flex: 1">{{title}}</h3>
-      <md-field id="search" md-inline='true'>
+      <!-- <md-field id="search" md-inline='true'>
       <label>Search</label>
       <md-input v-model="initial"></md-input>
     </md-field>
       <md-button>Refresh</md-button>
-      <md-button>Create</md-button>
+      <md-button>Create</md-button> -->
     </md-app-toolbar>
     <!-- SIDEBAR -->
     <md-app-drawer md-permanent="clipped" md-fixed>
       <md-list>
         <md-list-item>
           <md-icon>move_to_inbox</md-icon>
-          <span class="md-list-item-text" to="/">Inbox</span>
+          <span class="md-list-item-text" to="/">Chat</span>
         </md-list-item>
       </md-list>
     </md-app-drawer>
@@ -31,6 +31,7 @@
 <script>
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
+
 export default {
   items: [{
       title: 'Home',
@@ -48,7 +49,6 @@ export default {
       title: "LeeusNet"
     }
   }
-
 }
 </script>
 

@@ -1,23 +1,30 @@
 // Module Imports
 var app = require('express')();
 var http = require('http').Server(app);
-// var io = require('socket.io')(http);
-var port = require('./port').port;
+var io = require('socket.io')(http);
+var port = require('./server/port').port;
 // File Imports
-const Blockchain = require('../chain/blockchain');
-const Transaction = require('../chain/transaction');
+const Blockchain = require('./chain/blockchain');
+const Transaction = require('./chain/transaction');
 // const leeusNode = require('./chain/node.js');
 
 Leeus = new Blockchain();
 
 //
-// app.get('/', function(req, res) {
-// 	res.sendFile(__dirname + '/index.html');
-// });
-//
-// io.on('connection', function(socket) {
-// 	console.log('a user connected');
-// });
+app.set('view engine', 'ejs');
+app.get('/', function(req, res) {
+	res.render(__dirname + '/src/index.ejs');
+});
+
+io.on('connection', function(socket) {
+	console.log('a user connected');
+	socket.on('disconnect', function(){
+    console.log('user disconnected');
+  });
+	socket.on('chat message', function(msg){
+    console.log('message: ' + msg);
+  });
+});
 
 http.listen(port, function() {
 	console.log('Making noise on: ' + port);
