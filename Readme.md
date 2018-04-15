@@ -1,8 +1,10 @@
 # LeeusNet
 
 > A VueJS + Electron Application Using the Blockchain
-
-![alt text](https://raw.githubusercontent.com/NodeGG/LeeusNet/master/static/0.1.0.PNG "LeeusNet")
+Home
+![alt text](https://raw.githubusercontent.com/NodeGG/LeeusNet/master/static/home.PNG "LeeusNet - home")
+MarkDown
+![alt text](https://raw.githubusercontent.com/NodeGG/LeeusNet/master/static/0.1.0.PNG "LeeuNet - MarkDown")
 
 > TODO
 - [x] Implement Landing Page
