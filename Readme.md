@@ -1,7 +1,8 @@
 # LeeusNet
 
 > A VueJS + Electron Application Using the Blockchain
-Home
+
+> Home
 ![alt text](https://raw.githubusercontent.com/NodeGG/LeeusNet/master/static/home.PNG "LeeusNet - home")
 MarkDown
 ![alt text](https://raw.githubusercontent.com/NodeGG/LeeusNet/master/static/0.1.0.PNG "LeeuNet - MarkDown")
