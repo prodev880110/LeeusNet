@@ -7,12 +7,17 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'landing-page',
-      component: require('@/components/LandingPage/LandingPage').default
+      name: 'home',
+      component: require('@/components/home/home').default
     },
     {
-      path: '*',
-      redirect: '/'
-    }
+      path: '/markdown',
+      name: 'mark-down',
+      component: require('@/components/MarkDown/MarkDown').default
+    },
+    // {
+    //   path: '*',
+    //   redirect: '/'
+    // }
   ]
 })

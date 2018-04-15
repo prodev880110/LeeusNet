@@ -1,9 +1,6 @@
 <template>
 <div id="wrapper">
-  <ul id="messages"></ul>
-    <form action="">
-      <input id="m" placeholder="Message..." autocomplete="off" />
-    </form>
+  <editor />
 </div>
 </template>
 

@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  background-color: #eee;
+  color: #000;
+  height: 100%;
+  padding: 1%;
+  width: 100%;
+  height: inherit;
+  background-image: url('../../../../../static/mug.gif');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.md-display-4 {
+  color: #000;
+  text-align: center;
+}

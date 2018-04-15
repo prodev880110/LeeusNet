@@ -4,10 +4,10 @@ import axios from 'axios'
 import socketio from 'socket.io';
 import VueSocketIO from 'vue-socket.io'
 import VueMaterial from 'vue-material'
-import { MyVuexStore } from './store/index.js'
+
 // Imports Vuematerial styles
 import 'vue-material/dist/vue-material.min.css'
-import 'vue-material/dist/theme/black-green-dark.css'
+import 'vue-material/dist/theme/default-dark.css'
 
 
 // Files in Directory
