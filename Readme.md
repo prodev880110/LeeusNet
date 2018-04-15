@@ -1,8 +1,8 @@
 # LeeusNet
 
-> A VueJS + Electron Application
+> A VueJS + Electron Application Using the Blockchain
 
-![alt text](./static/0.1.0.png "LeeusNet")
+![alt text](https://raw.githubusercontent.com/NodeGG/LeeusNet/master/static/0.1.0.PNG "LeeusNet")
 
 > TODO
 - [x] Implement Landing Page
@@ -24,6 +24,10 @@ npm start
 # build electron application for production
 npm run build
 ```
+
+---
+
+###### Please Report any bugs and or feel free to contribute!
 
 ---
 
