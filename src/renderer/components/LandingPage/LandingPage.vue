@@ -2,7 +2,7 @@
 <div id="wrapper">
   <ul id="messages"></ul>
     <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
+      <input id="m" placeholder="Message..." autocomplete="off" />
     </form>
 </div>
 </template>

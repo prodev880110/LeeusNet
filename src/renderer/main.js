@@ -23,8 +23,7 @@ if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.http = Vue.prototype.$http = axios
 Vue.config.productionTip = false
 
-Vue.use(VueMaterial, store)
-Vue.use(VueSocketIO, server);
+Vue.use(VueMaterial, VueSocketIO, server, store);
 
 /* eslint-disable no-new */
 new Vue({
@@ -33,19 +32,5 @@ new Vue({
 	},
 	router,
 	store,
-	template: '<App/>',
-	sockets:{
-    connect: function(){
-      console.log('socket connected')
-    },
-    customEmit: function(val){
-      console.log('this method was fired by the socket server. eg: io.emit("customEmit", data)')
-    }
-  },
-  methods: {
-    clickButton: function(val){
-        // $socket is socket.io-client instance
-        this.$socket.emit('emit_method', val);
-    }
-  }
+	template: '<App/>'
 }).$mount('#app')
