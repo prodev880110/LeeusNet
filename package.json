@@ -2,7 +2,7 @@
   "name": "leeus-net",
   "version": "0.0.0",
   "proxy": "http:localhost:4702",
-  "author": "Warren Gates <warrenckhan@gmail.com>",
+  "author": "prodev880110 <jack.dev880110@gmail.com>",
   "description": "A full-featured Webpack with Vue Material for electron",
   "license": "MIT",
   "main": "./dist/electron/main.js",
